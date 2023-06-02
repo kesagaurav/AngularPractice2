@@ -1,0 +1,15 @@
+<div class="div container-fluid">
+  <div class="card" *ngFor="let book of books">
+      <div class="card-body">
+      <h4 class="card-text"> {{ book.name| uppercase }}</h4>
+      <h4 class="card-text"> {{ book.author| uppercase }}</h4>
+       <button class="btn btn-primary" (click)="deleteBook(book.id)">delete</button>
+       <button class="btn btn-primary"  type="button" (click)="updateBook(this.book)">update</button>
+  </div>
+  </div>
+</div>
+
+
+<!-- <h2>Data from text file:</h2>
+{{msg}}
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div> -->

@@ -1,0 +1,37 @@
+<app-register-form [parentData]="wish">
+
+</app-register-form>
+
+<h2>Popular Courses</h2>
+<button (click)="show = true">View Courses list</button><br /><br />
+<h2>Popular Courses</h2>
+<button (click)="show = true">View Courses list</button><br /><br />
+<div *ngIf="show">
+  <app-course-list></app-course-list>
+</div>
+<h2>Course Details</h2>
+Select a course to view
+<select #course (change)="name = course.value">
+  <option value="Node JS">Node JS</option>
+  <option value="Typescript">Typescript</option>
+  <option value="Angular">Angular</option>
+  <option value="React JS">React JS</option></select><br /><br />
+<app-course-list [cName]="name"></app-course-list>
+<p>the list are</p>
+<app-input-practice
+[eName]="employee1"></app-input-practice>
+<!--*ngFor="let item of employees"-->
+
+<h2>Courses List</h2>
+<app-course-list (onRegister)="courseReg($event)"></app-course-list>
+<br/><br/>
+
+<div *ngIf="message">{{ message }}</div>
+
+
+
+<div>
+  <h1>I'm a container component</h1>
+  <input type="text" [(ngModel)]="data" />
+  <app-child [title]="data"></app-child>
+</div>

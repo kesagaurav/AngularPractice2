@@ -1,0 +1,43 @@
+package com.gaurav.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.gaurav.model.Book;
+import com.gaurav.repository.BookRepository;
+import com.gaurav.service.BookService;
+
+@Service
+public class BookServiceImpl implements BookService {
+	@Autowired(required = false)
+	private BookRepository bookRepository;
+	@Override
+	public Book createBook(Book b) {
+		// TODO Auto-generated method stub
+		return bookRepository.save(b);
+	}
+
+	@Override
+	public void deleteBook(int id) {
+		// TODO Auto-generated method stub
+		bookRepository.deleteById(id);
+		
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return bookRepository.findAll();
+	}
+
+	@Override
+	public Book updateBook(Book b) {
+		// TODO Auto-generated method stub
+		
+		return bookRepository.save(b);
+		
+	}
+
+}

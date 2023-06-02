@@ -1,0 +1,26 @@
+<div class="container">
+<div *ngFor="let employee of employees">
+  <table>
+    <thead>
+    <tr>
+    <th>Id</th>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>{{employee.id}}</td>  <!--*ngFor="let employee of employees"-->
+    <td>{{employee.name}}</td>
+  </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+<div>
+  <p>{{course}}</p>
+  <button (click)="ChangeName()">change</button>
+</div>
+
+
+<p> Data coming from parent {{data}}</p>

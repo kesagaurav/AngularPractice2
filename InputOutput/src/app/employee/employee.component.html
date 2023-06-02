@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-light" *ngFor="let
+  employees of Employee">
+    <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>companyName</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{employees.id}}</td>
+        <td>{{employees.name}}</td>
+        <td>{{employees.salary}}</td>
+       <td> <app-company [cName]="company"></app-company></td>
+
+      <td><button class="btn btn-primary" (click)="selectUser(this.employee.id)" >register</button></td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>

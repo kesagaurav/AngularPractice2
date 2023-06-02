@@ -1,0 +1,16 @@
+<div>
+  <p *ngFor="let companyEl of Company">
+    {{companyEl.companyName}}
+  </p>
+</div>
+
+<!-- <ng-content></ng-content> -->
+
+
+
+
+ <h2> Employees List </h2>
+<app-employee (gaurav)="empReg($event)"></app-employee>
+<br/><br/>
+<div *ngIf="message">{{message}}</div>
+ 

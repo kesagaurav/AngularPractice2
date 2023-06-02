@@ -1,0 +1,40 @@
+package com.gaurav.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.gaurav.model.Book;
+import com.gaurav.service.BookService;
+@RestController
+public class BookController implements BookService {
+	@Autowired(required = false)
+	private BookService bs;
+	@Override
+	public Book createBook(Book b) {
+		// TODO Auto-generated method stub
+		return bs.createBook(b);
+	}
+
+	@Override
+	public void deleteBook(int id) {
+		// TODO Auto-generated method stub
+		bs.deleteBook(id);
+		
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return bs.getAllBooks();
+	}
+
+	@Override
+	public void updateBook(Book b) {
+		// TODO Auto-generated method stub
+		bs.updateBook(b);
+		
+	}
+
+}
